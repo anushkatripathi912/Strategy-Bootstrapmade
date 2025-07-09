@@ -101,10 +101,15 @@ body {
 
 .nav {
 
+  position:fixed;
 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 
   .navbar {
-    position: static;
+   
     top: 0;
     left: 0;
     width: 100%;
@@ -145,6 +150,7 @@ body {
       padding: 0.5rem 1rem;
       border-radius: 25px;
       cursor: pointer;
+     
     }
   }
 }
@@ -275,10 +281,7 @@ body {
   
   }
 
-  .container:hover{
-    background-color: #f4a124;
-    color:#6c757d;
-  }
+ 
 
   &__subtitle {
     text-transform: uppercase;
@@ -366,7 +369,7 @@ body {
 
       .about_features:hover{
 
-background-color: #dfbd31;
+background-color: #151515;
   color:#fff;
 
       }
@@ -374,15 +377,13 @@ background-color: #dfbd31;
         background: rgba(255, 255, 255, 0.05);
         padding: 1rem;
         border-radius: 10px;
+        width: 50%;
 
 
 .feature:hover{
   background-color: #dfbd31;
   color:#fff;
 }
-
-
-
 
         .icon {
           font-size: 1.5rem;
@@ -418,7 +419,7 @@ background-color: #dfbd31;
 
 
 
-// TESTIMONIALS
+// reviews
 
 
 
@@ -482,8 +483,15 @@ body {
   }
 
   .cards {
+
+
+
+
+    
     display: flex;
     gap: 1.5rem;
+     overflow-x: auto;        //
+    scroll-behavior: smooth;
 
     .card {
       background: $card-color;
@@ -493,6 +501,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      scroll-behavior: smooth;
 
       .stars {
         color: $accent-color;
@@ -545,113 +554,136 @@ body {
 // CHECK OUR SERVICES
 
 
-$primary: #f5b544;
-$dark: #0f1c2e;
-$text-light: #fff;
-$text-muted: #060b10;
 
-body {
-  background: $dark;
-  font-family: 'Segoe UI', sans-serif;
-  color: $text-light;
-  margin: 0;
-}
+
+$bg-color: #020b11;
+$card-color: #0f1a23;
+$accent: #facc15;
+$text-color: #ffffff;
+$muted: #ccc;
 
 .services {
-  padding: 4rem 2rem;
-
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-  }
-
-  &__label {
-    color: white;
-    letter-spacing: 1px;
-    font-size: 0.8rem;
-    text-align: left;
-  }
-
-  &__title {
-    font-size: 2rem;
-    margin: 1rem 0;
-    text-align: left;
-
-    span {
-      color: $primary;
-    }
-  }
-
-  &__desc {
-    color: white;
-    max-width: 700px;
-    margin: 0 auto 1.5rem;
-    text-align: right;
-  }
-
-  .btn-primary {
-    background: $primary;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #000;
-    margin-bottom: 2rem;
-    color: white;
-   
-    }
-  
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-  }
-
+  background-color: $bg-color;
+  padding: 8rem 8rem;
+  color: $text-color;
+  display:flex;
+  flex-wrap: wrap;
+  gap:2rem;
  
+
   
 
-  .service-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 10px;
+  // .view{
+  //   display:flex;
+  //   align-content: right;
+  //   justify-content: right;
+  // }
+
+  .section-header {
     text-align: left;
-    position: relative;
-    transition: background 0.3s;
+    max-width: 800px;
+    margin-bottom: 2rem;
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.08);
+    small {
+      color: $muted;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
     }
 
-    .icon {
-      font-size: 1.8rem;
-      color: $primary;
-      margin-bottom: 1rem;
-    }
-
-    h4 {
-      margin: 0 0 0.5rem;
+    h2 {
       font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: $text-color;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+
+      span {
+        color: $accent;
+      }
     }
 
     p {
-      font-size: 0.9rem;
-      color: $text-muted;
+      font-size: 0.95rem;
+      color: $muted;
+      line-height: 1.6;
     }
 
+    .all-services-btn {
+      margin-top: 1rem;
+      background-color: $accent;
+      color: #000;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
 
-
-
+      &:hover {
+        background-color: darken($accent, 10%);
+      }
+    }
   }
 
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 
-.myclass {
-  text-align: left;
+    .card {
+      background-color: $card-color;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      text-align: left;
+
+      i {
+        font-size: 1.8rem;
+        background-color: #1c1f23;
+        padding: 0.6rem;
+        border-radius: 8px;
+        color: $accent;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+        color: $text-color;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $muted;
+        line-height: 1.5;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// // CHECK OUR TEAM
 
 
 
@@ -659,21 +691,51 @@ $bg: #0b0c13;
 $card-bg: #111720;
 $text: #ffffff;
 $accent: #f4a124;
+$muted: #cccccc;
 
 body {
   margin: 0;
-  background-color: $bg;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background: $bg;
   color: $text;
 }
 
-.services {
+.container {
+  max-width: 1200px;
+  margin: auto;
   padding: 60px 20px;
+}
 
-  .container {
-    max-width: 1200px;
-    margin: auto;
+.section-header {
+  margin-bottom: 40px;
+
+  h5 {
+    color: lighten($text, 30%);
+    letter-spacing: 1px;
   }
+
+  h2 {
+    font-size: 28px;
+    margin-top: 5px;
+    border-bottom: 2px solid $accent;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  display: flex;
+  background: $card-bg;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  transition: transform 0.3s;
 
   .grid {
     display: grid;
@@ -1034,200 +1096,144 @@ body {
 
 
 
-// $bg: #0b0c13;
-// $card-bg: #111720;
-// $text: #ffffff;
-// $accent: #f4a124;
+$bg: #0b0c13;
+$card-bg: #111720;
+$text: #ffffff;
+$accent: #f4a124;
 
-// body {
-//   margin: 0;
-//   font-family: "Segoe UI", sans-serif;
-//   background: $bg;
-//   color: $text;
-// }
-
-// .container {
-//   max-width: 1200px;
-//   margin: auto;
-//   padding: 60px 20px;
-// }
-
-// .section-header {
-//   margin-bottom: 30px;
-
-//   h5 {
-//     color: lighten($text, 30%);
-//     letter-spacing: 1px;
-//   }
-
-//   h2 {
-//     margin-top: 5px;
-//     font-size: 28px;
-//     border-bottom: 2px solid $accent;
-//     display: inline-block;
-//     padding-bottom: 5px;
-//   }
-// }
-
-// .testimonial-card {
-//   background: $card-bg;
-//   border-radius: 12px;
-//   display: flex;
-//   flex-wrap: wrap;
-//   overflow: hidden;
-//   padding: 30px;
-//   gap: 20px;
-
-//   .testimonial-content {
-//     flex: 1 1 60%;
-
-//     h3 {
-//       margin-bottom: 15px;
-//       font-size: 20px;
-//     }
-
-//     p {
-//       font-size: 15px;
-//       line-height: 1.6;
-//     }
-
-  //   .testimonial-author {
-  //     display: flex;
-  //     align-items: center;
-  //     margin-top: 25px;
-
-  //     img {
-  //       width: 50px;
-  //       height: 50px;
-  //       border-radius: 50%;
-  //       margin-right: 15px;
-  //     }
-
-  //     h4 {
-  //       margin: 0;
-  //     }
-
-  //     span {
-  //       font-size: 13px;
-  //       color: lighten($text, 40%);
-  //     }
-  //   }
-  // }
-
-//   .testimonial-image {
-//     flex: 1 1 35%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-
-//     img {
-//       width: 100%;
-//       max-width: 250px;
-//       border-radius: 12px;
-//     }
-//   }
-// }
-
-// .testimonial-nav {
-//   display: flex;
-//   justify-content: center;
-//   margin-top: 20px;
-
-//   button {
-//     background: none;
-//     border: 2px solid lighten($text, 20%);
-//     color: $text;
-//     font-size: 18px;
-//     padding: 8px 14px;
-//     margin: 0 5px;
-//     border-radius: 50%;
-//     cursor: pointer;
-
-//     &:hover {
-//       background: $accent;
-//       color: $bg;
-//       border-color: $accent;
-//     }
-//   }
-// }
-
-/* Responsive */
-// @media screen and (max-width: 768px) {
-//   .testimonial-card {
-//     flex-direction: column;
-//     align-items: center;
-
-//     .testimonial-image {
-//       order: -1;
-//       margin-bottom: 20px;
-//     }
-
-//     .testimonial-content {
-//       text-align: center;
-
-//       .testimonial-author {
-//         justify-content: center;
-//       }
-//     }
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.testimonial-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 20px 0;
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: $bg;
+  color: $text;
 }
 
-.testimonial-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  padding: 10px;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.section-header {
+  margin-bottom: 30px;
+
+  h5 {
+    color: lighten($text, 30%);
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    margin-top: 5px;
+    font-size: 28px;
+    border-bottom: 2px solid $accent;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
 }
 
 .testimonial-card {
-  flex: 0 0 auto;
-  min-width: 300px; // adjust as needed
-  background-color: #1c232b;
+  background: $card-bg;
   border-radius: 12px;
-  padding: 20px;
-  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 30px;
+  gap: 20px;
+
+  .testimonial-content {
+    flex: 1 1 60%;
+
+    h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      margin-top: 25px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      span {
+        font-size: 13px;
+        color: lighten($text, 40%);
+      }
+    }
+  }
+
+  .testimonial-image {
+    flex: 1 1 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 12px;
+    }
+  }
 }
 
-.scroll-btn {
-  background-color: #1c232b;
-  color: white;
-  border: none;
-  font-size: 24px;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  button {
+    background: none;
+    border: 2px solid lighten($text, 20%);
+    color: $text;
+    font-size: 18px;
+    padding: 8px 14px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background: $accent;
+      color: $bg;
+      border-color: $accent;
+    }
+  }
 }
 
-.left {
-  margin-right: 10px;
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .testimonial-card {
+    flex-direction: column;
+    align-items: center;
+
+    .testimonial-image {
+      order: -1;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-content {
+      text-align: center;
+
+      .testimonial-author {
+        justify-content: center;
+      }
+    }
+  }
 }
 
-.right {
-  margin-left: 10px;
-}
 
 
 

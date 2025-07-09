@@ -61,6 +61,11 @@ body {
 }
 
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +73,6 @@ body {
   color: antiquewhite;
 }
 .nav .navbar {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -269,10 +273,19 @@ body {
     gap: 1.5rem;
   }
 }
+.about__content .about__features .about_features:hover {
+  background-color: #151515;
+  color: #fff;
+}
 .about__content .about__features .feature {
   background: rgba(255, 255, 255, 0.05);
   padding: 1rem;
   border-radius: 10px;
+  width: 50%;
+}
+.about__content .about__features .feature .feature:hover {
+  background-color: #dfbd31;
+  color: #fff;
 }
 .about__content .about__features .feature .icon {
   font-size: 1.5rem;
@@ -346,6 +359,8 @@ body {
 .testimonials .cards {
   display: flex;
   gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 .testimonials .cards .card {
   background: #1b232a;
@@ -355,6 +370,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  scroll-behavior: smooth;
 }
 .testimonials .cards .card .stars {
   color: #facc15;
@@ -392,109 +408,140 @@ body {
   color: #ccc;
 }
 
-body {
-  background: #0f1c2e;
-  font-family: "Segoe UI", sans-serif;
-  color: #fff;
-  margin: 0;
-}
-
 .services {
-  padding: 4rem 2rem;
+  background-color: #020b11;
+  padding: 8rem 8rem;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
-.services .container {
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
+.services .section-header {
+  text-align: left;
+  max-width: 800px;
+  margin-bottom: 2rem;
 }
-.services__label {
-  color: white;
-  letter-spacing: 1px;
+.services .section-header small {
+  color: #ccc;
+  text-transform: uppercase;
   font-size: 0.8rem;
-  text-align: left;
+  letter-spacing: 1px;
 }
-.services__title {
+.services .section-header h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+.services .section-header h3 {
   font-size: 2rem;
-  margin: 1rem 0;
-  text-align: left;
+  margin: 0.5rem 0;
 }
-.services__title span {
-  color: #f5b544;
+.services .section-header h3 span {
+  color: #facc15;
 }
-.services__desc {
-  color: white;
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  text-align: right;
+.services .section-header p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
 }
-.services .btn-primary {
-  background: #f5b544;
+.services .section-header .all-services-btn {
+  margin-top: 1rem;
+  background-color: #facc15;
+  color: #000;
   border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
-  color: #000;
-  margin-bottom: 2rem;
-  color: white;
+  transition: background 0.3s ease;
 }
-.services .btn-primary :hover {
-  color: #6c757d;
+.services .section-header .all-services-btn:hover {
+  background-color: #d7ad05;
 }
-.services__grid {
+.services .service-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-.services .service-card {
-  background: rgba(255, 255, 255, 0.05);
+.services .service-cards .card {
+  background-color: #0f1a23;
   padding: 1.5rem;
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
   text-align: left;
-  position: relative;
-  transition: background 0.3s;
 }
-.services .service-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-.services .service-card .icon {
+.services .service-cards .card i {
   font-size: 1.8rem;
-  color: #f5b544;
+  background-color: #1c1f23;
+  padding: 0.6rem;
+  border-radius: 8px;
+  color: #facc15;
   margin-bottom: 1rem;
+  display: inline-block;
 }
-.services .service-card h4 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+.services .service-cards .card h4 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #ffffff;
 }
-.services .service-card p {
+.services .service-cards .card p {
   font-size: 0.9rem;
-  color: #060b10;
+  color: #ccc;
+  line-height: 1.5;
 }
-
-.myclass {
-  text-align: left;
+.services .service-cards .card:hover {
+  transform: translateY(-5px);
 }
 
 body {
   margin: 0;
-  background-color: #0b0c13;
   font-family: "Segoe UI", sans-serif;
+  background: #0b0c13;
   color: #ffffff;
 }
 
-.services {
-  padding: 60px 20px;
-}
-.services .container {
+.container {
   max-width: 1200px;
   margin: auto;
+  padding: 60px 20px;
 }
-.services .grid {
+
+.section-header {
+  margin-bottom: 40px;
+}
+.section-header h5 {
+  color: white;
+  letter-spacing: 1px;
+}
+.section-header h2 {
+  font-size: 28px;
+  margin-top: 5px;
+  border-bottom: 2px solid #f4a124;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  display: flex;
+  background: #111720;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  transition: transform 0.3s;
+}
+.team-card .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
-.services .card {
+.team-card .card {
   background-color: #111720;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -502,7 +549,7 @@ body {
   position: relative;
   transition: all 0.3s;
 }
-.services .card .icon {
+.team-card .card .icon {
   font-size: 30px;
   background-color: rgba(244, 161, 36, 0.15);
   color: #f4a124;
@@ -512,22 +559,22 @@ body {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.services .card h3 {
+.team-card .card h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
-.services .card h3 span {
+.team-card .card h3 span {
   color: #f4a124;
 }
-.services .card p {
+.team-card .card p {
   font-size: 14px;
   line-height: 1.6;
 }
-.services .card.active {
+.team-card .card.active {
   background-color: #0c1016;
   border-left: 5px solid #f4a124;
 }
-.services .card.active .arrow {
+.team-card .card.active .arrow {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -537,7 +584,7 @@ body {
   padding: 8px;
   font-size: 14px;
 }
-.services .card:hover {
+.team-card .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
