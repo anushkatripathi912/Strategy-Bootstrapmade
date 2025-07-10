@@ -147,25 +147,87 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 
 
 
-  const leftBtn = document.getElementById("leftBtn");
-  const rightBtn = document.getElementById("rightBtn");
-  const cardsContainer = document.getElementById("testimonialCards");
+  // const leftBtn = document.getElementById("leftBtn");
+  // const rightBtn = document.getElementById("rightBtn");
+  // const cardsContainer = document.getElementById("testimonialCards");
 
-  const scrollAmount = 350; // Adjust based on your card width
+  // const scrollAmount = 350; // Adjust based on your card width
 
-  leftBtn.addEventListener("click", () => {
-    cardsContainer.scrollBy({
-      left: -scrollAmount,
-      behavior: "smooth"
+  // leftBtn.addEventListener("click", () => {
+  //   cardsContainer.scrollBy({
+  //     left: -scrollAmount,
+  //     behavior: "smooth"
+  //   });
+  // });
+
+  // rightBtn.addEventListener("click", () => {
+  //   cardsContainer.scrollBy({
+  //     left: scrollAmount,
+  //     behavior: "smooth"
+  //   });
+  // });
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const leftBtn = document.getElementById("leftBtn");
+    const rightBtn = document.getElementById("rightBtn");
+    const cardsContainer = document.getElementById("testimonialCards");
+
+    const scrollAmount = 300; // Adjust scroll amount as needed
+
+    rightBtn.addEventListener("click", () => {
+      cardsContainer.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+    });
+
+    leftBtn.addEventListener("click", () => {
+      cardsContainer.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+      });
     });
   });
 
-  rightBtn.addEventListener("click", () => {
-    cardsContainer.scrollBy({
-      left: scrollAmount,
-      behavior: "smooth"
-    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////scroll
+
+
+
+
+
+
+
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+  scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
+});
 
 
 
@@ -173,3 +235,23 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 
 
 
+
+
+///service
+
+
+
+
+
+const dots = document.querySelectorAll('.dot');
+const images = document.querySelectorAll('.slides img');
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    dots.forEach(d => d.classList.remove('active'));
+    images.forEach(img => img.classList.remove('active'));
+
+    dot.classList.add('active');
+    images[index].classList.add('active');
+  });
+});

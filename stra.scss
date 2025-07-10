@@ -90,7 +90,7 @@ $text-muted: #cbd5e1;
 
 
 body {
-  margin: 0;
+ 
   font-family: sans-serif;
   background: $dark;
   color: $text-muted;
@@ -435,6 +435,8 @@ body {
   margin: 0;
   padding: 2rem;
   color: $text-color;
+  display: flex;
+  overflow:hidden;
 }
 
 .testimonials {
@@ -484,25 +486,33 @@ body {
 
   .cards {
 
-
-
-
-    
     display: flex;
     gap: 1.5rem;
-     overflow-x: auto;        //
+    overflow-x: auto;
+    overflow-y:hidden;        //
     scroll-behavior: smooth;
+    min-width:250px;
+    padding:1 rem;
+    
+    .cards::-webkit-scrollbar {
+          width:10px;
+        
+
+  
 
     .card {
+
+    
       background: $card-color;
       border-radius: 8px;
       padding: 1rem;
       flex: 1;
-      display: flex;
+      display: inline-block;
       flex-direction: column;
       justify-content: space-between;
       scroll-behavior: smooth;
-
+      margin-right:10px;
+      
       .stars {
         color: $accent-color;
         margin-bottom: 0.5rem;
@@ -543,13 +553,15 @@ body {
             font-size: 0.75rem;
             color: $muted-color;
           }
+        
+
         }
       }
     }
   }
 }
 
-
+}
 
 // CHECK OUR SERVICES
 
@@ -2179,6 +2191,167 @@ body {
 }
 
 
+
+
+
+
+////////////////service
+
+
+
+
+///services
+
+
+
+
+$bg: #07141f;
+$card: #101a27;
+$text: #ffffff;
+$accent: #f4a124;
+$gray: #cbd5e1;
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: $bg;
+  color: $text;
+}
+
+.details-page {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+
+  .content {
+    flex: 1 1 60%;
+
+    .intro {
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .portfolio-slider {
+        position: relative;
+
+        .slides {
+          display: flex;
+          gap: 1rem;
+
+          img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            display: none;
+            &.active {
+              display: block;
+            }
+          }
+        }
+
+        .slider-dots {
+          margin-top: 0.5rem;
+          display: flex;
+          gap: 0.4rem;
+
+          .dot {
+            width: 10px;
+            height: 10px;
+            background: gray;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &.active {
+              background: $accent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .offer-box, .testimonial, .contact-box {
+      background: $card;
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    .offer-box {
+      h3 {
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 1rem;
+          i {
+            color: $accent;
+            margin-right: 0.5rem;
+          }
+
+          span {
+            font-size: 0.875rem;
+            color: $gray;
+          }
+        }
+      }
+    }
+
+    .testimonial {
+      .quote {
+        font-size: 1.5rem;
+        color: $accent;
+      }
+
+      p {
+        font-style: italic;
+        margin: 1rem 0;
+      }
+
+      .author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        span {
+          color: $gray;
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .contact-box {
+      h3 {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin: 0.5rem 0;
+        i {
+          color: $accent;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
 
 
 

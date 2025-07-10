@@ -13,6 +13,9 @@
 </head>
 <body>
 
+
+
+
    <!-- Navbar started-->
 
   <nav class="nav" style="background-color: rgb(42, 42, 44); border-radius: 200px; height:20px; position:fixed; top: 0;left: 0; width: 90%; z-index: 1000; margin:20px;">
@@ -75,7 +78,7 @@
     <div class="hero__image-wrapper">
       <img src="imagessss/img/abstract/abstract-1.webp"  data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" alt="Creative Design" class="hero__image bounce " style="height: 400px; width:400px;" />
       <div class="hero__stats" style="background-color:rgba(255,255,255,0.1);" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">
-        <div class="hero__stats-count">5K <a href="#home"><i class="fa-solid fa-arrow-right fa-rotate-left bg-warning" style="background-color: rgb(241, 181, 28); border-radius: 100px; color: white;"></i></a></div>
+        <div class="hero__stats-count">5K <a href="#home"><i class="fa-solid fa-arrow-right fa-rotate-left bg-warning" style="background-color: rgb(241, 181, 28); border-radius: 50px; color: white; height:30px "></i></a></div>
         <div class="hero__stats-label">Successful Campaigns</div>
       </div>
     </div>
@@ -146,17 +149,22 @@
 
 
   <section class="testimonials" data-aos="fade-left">
+
+    
     
     <div class="header" data-aos="fade-right">
 
       <h2>Our Clients Speak Highly</h2>
       <p>Hear directly from those who have experienced the impact<br>
         of our partnership and achieved their strategic goals.</p>
-      <div class="nav-buttons">
-        <button><i class="fas fa-arrow-left"></i></button>
-        <button><i class="fas fa-arrow-right"></i></button>
+      <div class="nav-buttons" >
+        <button id="leftBtn"><i class="fas fa-arrow-left"></i></button>
+        <button id="rightBtn"><i class="fas fa-arrow-right"></i></button>
       </div>
     </div>
+
+
+
 
     <div class="cards" id="testimonialCards">
 
@@ -227,6 +235,11 @@
 
 
 
+      
+
+
+
+
 
     </div>
   </section>
@@ -237,8 +250,7 @@
 <!--Reviews end-->
 
 
-       
-
+      
 
 
 <!--Services -->
@@ -265,44 +277,58 @@
 <br>
 
 
-
-  <div class="service-cards" >
-    <div class="card" data-aos="zoom-in">
+  <div class="service-cards"  >
+    <div class="card" data-aos="zoom-in" >
       <i class="fa-solid fa-palette"></i>
+      <div style="border-radius:20px; text-align:right; justify-content:right;"> <a href="details.html" ><i class="fa-solid fa-arrow-right" style="border: 2px solid rgb(195, 152, 45); border-radius:100px; background-color: gold; color:aliceblue"></i></div></a>
       <h4>Creative branding</h4>
       <p>Maecenas eget magna neque. Suspendisse potenti. Curabitur eleifend nisl non magna vulputate.</p>
     </div>
+  
 
     <div class="card" data-aos="zoom-in">
       <i class="fa-solid fa-gem"></i>
+      <div style="border-radius:200px; text-align:right; justify-content:right;"> <a href="details.html" ><i class="fa-solid fa-arrow-right" style="border: 2px solid rgb(195, 152, 45); border-radius:100px; background-color: gold; color:aliceblue"></i></div></a>
       <h4>Design systems</h4>
       <p>Praesent euismod varius tellus, vel bibendum nunc interdum at. Donec vehicula diam vel metus.</p>
     </div>
+    
 
     <div class="card" data-aos="zoom-in">
       <i class="fa-solid fa-bullhorn"></i>
+      <div style="border-radius:200px; text-align:right; justify-content:right;"> <a href="details.html" ><i class="fa-solid fa-arrow-right" style="border: 2px solid rgb(195, 152, 45); border-radius:100px; background-color: gold; color:aliceblue"></i></div></a>
       <h4>Marketing strategies</h4>
       <p>Vivamus tempor velit id magna dictum, sed fermentum nisi faucibus. Integer nec pretium sapien.</p>
     </div>
+    
+
 
     <div class="card" data-aos="zoom-in">
       <i class="fa-solid fa-code"></i>
+      <div style="border-radius:200px; text-align:right; justify-content:right;"> <a href="details.html" ><i class="fa-solid fa-arrow-right" style="border: 2px solid rgb(195, 152, 45); border-radius:100px; background-color: gold; color:aliceblue"></i></div></a>
       <h4>Digital platforms</h4>
       <p>Cras fermentum odio eu feugiat malesuada. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
     </div>
+    
 
-    <div class="card" data-aos="zoom-in">
+
+   <div class="card" data-aos="zoom-in">
       <i class="fa-solid fa-rocket"></i>
+      <div style="border-radius:200px; text-align:right; justify-content:right;"> <a href="details.html" ><i class="fa-solid fa-arrow-right" style="border: 2px solid rgb(195, 152, 45); border-radius:100px; background-color: gold; color:aliceblue"></i></div></a>
       <h4>Growth acceleration</h4>
       <p>Aenean vel augue vel nisi bibendum eu. Phasellus in lacus quis urna sodales dignissim.</p>
     </div>
+   
+
 
     <div class="card" data-aos="zoom-in">
       <i class="fa-solid fa-video"></i>
+      <div style="border-radius:200px; text-align:right; justify-content:right;"> <a href="details.html" ><i class="fa-solid fa-arrow-right" style="border: 2px solid rgb(195, 152, 45); border-radius:100px; background-color: gold; color:aliceblue"></i></div></a>
       <h4>Media solutions</h4>
       <p>Morbi feugiat diam sed risus faucibus, nec commodo purus facilisis. Vestibulum accumsan magna.</p>
     </div>
   </div>
+  
 </section>
 
 
@@ -327,6 +353,10 @@
     </div>
 
     <div class="timeline" data-aos="fade-right">
+      
+
+
+
       <div class="step"  data aos="fade-right">
         <div class="icon" data aos="fade-right"><i class="fa-solid fa-lightbulb"></i></div>
         <div class="content" data aos="fade-right">
@@ -869,7 +899,7 @@
       </div>
 
       <!-- Right Column (Accordion) -->
-      <div class="faq-accordion">
+      <div class="faq-accordion" data-aos="fade-up">
         <div class="faq-item active">
           <button class="faq-question">Non consectetur a erat nam at lectus urna duis?</button>
           <div class="faq-answer">
@@ -1057,175 +1087,7 @@
 </script>
 
 
-<!-- 
-// // get in touch form
 
-
-
-
-//   function validateForm() {
-//     let name = document.getElementById("name").value.trim();
-//     let email = document.getElementById("email").value.trim();
-//     let message = document.getElementById("message").value.trim();
-
-//     if (!name || !email || !message) {
-//       alert("All fields are required.");
-//       return false; // Prevent form submission
-//     }
-
-//     return true; // Allow form to submit
-//   } -->
-
-
-
-<!-- 
-
-
-// //Testimonials
-
-
-
-// const testimonials = [
-//   {
-//     title: "Labore nostrum eos impedit",
-//     message: `Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor.
-    
-//     Itaque et explicabo vero occaecati est quam rerum sed. Nobis quia autem odit ipsam numquam. Doloribus sit sint corporis eius totam fuga.`,
-//     name: "Matt Brandon",
-//     role: "Freelancer",
-//     image: "imagessss/img/person/person-m-7.webp"
-//   },
-//   {
-//     title: "Impedit dolor facilis nulla",
-//     message: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error.
-    
-//     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.`,
-//     name: "Jena Karlis",
-//     role: "Product Manager",
-//     image: "imagessss/img/person/person-f-10.webp"
-//   },
-
-//    {
-//     title: "Sint occaecati cupiditate",
-//     message: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error.
-//     Itaque et explicabo vero occaecati est quam rerum sed. Nobis quia autem odit ipsam numquam. Doloribus sit sint corporis eius totam fuga.
-//     `,
-//     name: "Sara Thompson",
-//     role: "Product Manager",
-//     image: "imagessss/img/person/person-m-9.webp"
-//   }
-// ]; -->
-
-<!-- // let current = 0;
-
-// const titleEl = document.getElementById("testimonialTitle");
-// const messageEl = document.getElementById("testimonialMessage");
-// const nameEl = document.getElementById("testimonialName");
-// const roleEl = document.getElementById("testimonialRole");
-// const imageEl = document.getElementById("testimonialImage");
-
-// function updateTestimonial(index) {
-//   const t = testimonials[index];
-//   titleEl.textContent = t.title;
-//   messageEl.innerHTML = t.message.replace(/\n/g, "<br>");
-//   nameEl.textContent = t.name;
-//   roleEl.textContent = t.role;
-//   imageEl.src = t.image;
-// }
-
-// document.getElementById("nextBtn").addEventListener("click", () => {
-//   current = (current + 1) % testimonials.length;
-//   updateTestimonial(current);
-// });
-
-// document.getElementById("prevBtn").addEventListener("click", () => {
-//   current = (current - 1 + testimonials.length) % testimonials.length;
-//   updateTestimonial(current);
-// });
-
-// // Initial load
-// updateTestimonial(current); -->
-
-
-
-
-
-<!-- 
-
-
-// // Portfolio
-
-
-// const filterButtons = document.querySelectorAll(".filter-btn");
-// const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-// filterButtons.forEach(button => {
-//   button.addEventListener("click", () => {
-//     // Remove "active" class from all buttons
-//     filterButtons.forEach(btn => btn.classList.remove("active"));
-//     button.classList.add("active");
-
-//     const filterValue = button.getAttribute("data-filter");
-
-//     portfolioItems.forEach(item => {
-//       if (filterValue === "all" || item.classList.contains(filterValue)) {
-//         item.classList.remove("hidden");
-//       } else {
-//         item.classList.add("hidden");
-//       }
-//     });
-//   });
-// }); -->
-
-
-
-<!-- 
-
-
-
-// //FAQ
-
-
-
-// document.querySelectorAll('.faq-question').forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     const item = btn.parentElement;
-//     item.classList.toggle('active');
-//   });
-// }); -->
-
-
-
-
-
-
-
-<!-- 
-
-// // reviews
-
-
-
-//   const leftBtn = document.getElementById("leftBtn");
-//   const rightBtn = document.getElementById("rightBtn");
-//   const cardsContainer = document.getElementById("testimonialCards");
-
-//   const scrollAmount = 350; // Adjust based on your card width
-
-//   leftBtn.addEventListener("click", () => {
-//     cardsContainer.scrollBy({
-//       left: -scrollAmount,
-//       behavior: "smooth"
-//     });
-//   });
-
-//   rightBtn.addEventListener("click", () => {
-//     cardsContainer.scrollBy({
-//       left: scrollAmount,
-//       behavior: "smooth"
-//     });
-//   });
- -->
 
 
 
