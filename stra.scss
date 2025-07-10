@@ -1,18 +1,9 @@
-
-
 // NAVBAR
-
-
-
 
 $primary: #f5b544;
 $dark: #0f1c2e;
 $text-light: #fff;
 $text-muted: #cbd5e1;
-
-
-
-
 
 
 .nav__item {
@@ -31,8 +22,6 @@ $text-muted: #cbd5e1;
     color: white;
     text-decoration: none;
     white-space: nowrap;
-
-
 
   }
 
@@ -85,10 +74,6 @@ $text-muted: #cbd5e1;
 }
 
 
-
-
-
-
 body {
  
   font-family: sans-serif;
@@ -114,8 +99,6 @@ body {
     left: 0;
     width: 100%;
   }
-  
-
 
 
   display: flex;
@@ -123,9 +106,6 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   color:antiquewhite;
-
-
-
 
   
   &__logo {
@@ -364,9 +344,6 @@ body {
         gap: 1.5rem;
       }
 
-
-
-
       .about_features:hover{
 
 background-color: #151515;
@@ -416,8 +393,6 @@ background-color: #151515;
     }
   }
 }
-
-
 
 // reviews
 
@@ -497,9 +472,6 @@ body {
     .cards::-webkit-scrollbar {
           width:10px;
         
-
-  
-
     .card {
 
     
@@ -565,9 +537,6 @@ body {
 
 // CHECK OUR SERVICES
 
-
-
-
 $bg-color: #020b11;
 $card-color: #0f1a23;
 $accent: #facc15;
@@ -581,15 +550,6 @@ $muted: #ccc;
   display:flex;
   flex-wrap: wrap;
   gap:2rem;
- 
-
-  
-
-  // .view{
-  //   display:flex;
-  //   align-content: right;
-  //   justify-content: right;
-  // }
 
   .section-header {
     text-align: left;
@@ -683,21 +643,7 @@ $muted: #ccc;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 // // CHECK OUR TEAM
-
-
 
 $bg: #0b0c13;
 $card-bg: #111720;
@@ -810,12 +756,7 @@ body {
   }
 }
 
-
-
-
 // HOW WE WORK
-
-
 
 $bg-color: #020b11;
 $card-color: #1b232a;
@@ -925,11 +866,7 @@ body {
   }
 }
 
-
-
 // DONT MISS
-
-
 
 $bg-color: #020b11;
 $text-color: #ffffff;
@@ -1102,11 +1039,7 @@ body {
   }
 }
 
-
-
 // TESTIMONIALS
-
-
 
 $bg: #0b0c13;
 $card-bg: #111720;
@@ -1246,16 +1179,7 @@ body {
   }
 }
 
-
-
-
-
-
-
-
 // CHECK OUR TEAM
-
-
 
 $bg: #0b0c13;
 $card-bg: #111720;
@@ -1355,7 +1279,7 @@ body {
   }
 }
 
-/* Mobile Adjustments */
+
 @media (max-width: 600px) {
   .team-card {
     flex-direction: column;
@@ -1376,16 +1300,7 @@ body {
   }
 }
 
-
-
-
-
-
-
 // testimonials
-
-
-
 
 .testimonials-section {
   .section-title {
@@ -1490,12 +1405,7 @@ body {
   }
 }
 
-
-
-
-
 // PORTFOLIO
-
 
 $bg-dark: #0b0c13;
 $text-light: #ffffff;
@@ -1584,14 +1494,7 @@ body {
   }
 }
 
-
-
-
-
 // CHECK OUR PRICES
-
-
-
 
 $bg-color: #020b11;
 $card-color: #1b232a;
@@ -1633,14 +1536,10 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 
-
-
     &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
-
-    
 
     .card {
       background: $card-color;
@@ -1669,8 +1568,6 @@ body {
         border-top-right-radius: 12px;
         border-bottom-left-radius: 12px;
       }
-
-      
 
       .icon {
         font-size: 2rem;
@@ -1759,20 +1656,12 @@ body {
   .pricing-cards {
     flex-direction: column;
     align-items: center;
-
-
-
-    
     
   }
 }
 
 
-
-
 // FAQ
-
-
 
 $bg: #0b0c13;
 $card-bg: #111720;
@@ -1883,11 +1772,7 @@ body {
 }
 
 
-
-
 // CONNECT
-
-
 
 $bg: #0b0c13;
 $card-bg: #1a1c24;
@@ -1975,10 +1860,7 @@ body {
 }
 
 
-
-
 // GET IN TOUCH
-
 
 
 $bg: #0b0c13;
@@ -2085,10 +1967,7 @@ body {
 }
 
 
-
 // // FOOTER
-
-
 
 $bg: #0b0c13;
 $card-bg: #111720;
@@ -2190,20 +2069,7 @@ body {
   }
 }
 
-
-
-
-
-
-////////////////service
-
-
-
-
 ///services
-
-
-
 
 $bg: #07141f;
 $card: #101a27;
@@ -2353,8 +2219,213 @@ body {
   }
 }
 
+// portfolio
 
+$bg: #07141f;
+$card: #101a27;
+$text: #ffffff;
+$accent: #f4a124;
+$gray: #cbd5e1;
 
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: $bg;
+  color: $text;
+}
 
+.portfolio-details {
+  .container {
+    padding: 2rem;
 
+    .portfolio-header {
+      text-align: center;
+      margin-bottom: 2rem;
 
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        color: $gray;
+        font-size: 0.875rem;
+      }
+    }
+
+    .portfolio-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .image-slider {
+        flex: 1 1 40%;
+        position: relative;
+
+        .slide {
+          display: none;
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        .slide.active {
+          display: block;
+        }
+
+        .slider-btn {
+          position: absolute;
+          top: 40%;
+          background: $card;
+          border: none;
+          color: $text;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          font-size: 1.2rem;
+
+          &.prev {
+            left: 0;
+          }
+
+          &.next {
+            right: 0;
+          }
+        }
+
+        .thumbs {
+          display: flex;
+          gap: 0.5rem;
+          margin-top: 1rem;
+
+          .thumb {
+            width: 60px;
+            cursor: pointer;
+            opacity: 0.6;
+            border-radius: 6px;
+
+            &.active {
+              border: 2px solid $accent;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .portfolio-info {
+        flex: 1 1 55%;
+
+        .meta {
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+          margin-bottom: 0.5rem;
+
+          .tag {
+            background: $accent;
+            color: $bg;
+            padding: 0.2rem 0.6rem;
+            border-radius: 5px;
+            font-size: 0.75rem;
+          }
+
+          span {
+            font-size: 0.8rem;
+            color: $gray;
+          }
+        }
+
+        h3 {
+          margin: 0.5rem 0;
+        }
+
+        a {
+          color: $accent;
+          text-decoration: none;
+          font-size: 0.9rem;
+        }
+
+        .accordion {
+          margin-top: 1rem;
+
+          .accordion-header {
+            background: $card;
+            color: $text;
+            padding: 0.8rem;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 0.2rem;
+            font-weight: bold;
+          }
+
+          .accordion-body {
+            display: none;
+            background: #0d1a27;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid $accent;
+          }
+        }
+
+        .tech-tags {
+          margin: 1rem 0;
+          span {
+            display: inline-block;
+            background: $card;
+            color: $gray;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            margin-right: 0.4rem;
+            font-size: 0.75rem;
+          }
+        }
+
+        .features {
+          h4 {
+            margin-bottom: 0.5rem;
+          }
+
+          ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.5rem;
+            padding: 0;
+
+            li {
+              list-style: none;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              i {
+                color: $accent;
+              }
+            }
+          }
+        }
+
+        .actions {
+          margin-top: 1rem;
+          display: flex;
+          gap: 1rem;
+
+          .btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+
+            &.primary {
+              background: $accent;
+              color: $bg;
+            }
+
+            &:not(.primary) {
+              background: #222e3c;
+              color: $text;
+            }
+          }
+        }
+      }
+    }
+  }
+}

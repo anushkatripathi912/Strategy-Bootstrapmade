@@ -1,9 +1,6 @@
 
 // get in touch form
 
-
-
-
   function validateForm() {
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
@@ -18,12 +15,7 @@
   }
 
 
-
-
-
-
 //Testimonials
-
 
 
 const testimonials = [
@@ -88,12 +80,6 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 updateTestimonial(current);
 
 
-
-
-
-
-
-
 // Portfolio
 
 
@@ -120,10 +106,6 @@ filterButtons.forEach(button => {
 
 
 
-
-
-
-
 //FAQ
 
 
@@ -136,39 +118,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 });
 
 
-
-
-
-
-
-
-
 // reviews
-
-
-
-  // const leftBtn = document.getElementById("leftBtn");
-  // const rightBtn = document.getElementById("rightBtn");
-  // const cardsContainer = document.getElementById("testimonialCards");
-
-  // const scrollAmount = 350; // Adjust based on your card width
-
-  // leftBtn.addEventListener("click", () => {
-  //   cardsContainer.scrollBy({
-  //     left: -scrollAmount,
-  //     behavior: "smooth"
-  //   });
-  // });
-
-  // rightBtn.addEventListener("click", () => {
-  //   cardsContainer.scrollBy({
-  //     left: scrollAmount,
-  //     behavior: "smooth"
-  //   });
-  // });
-
-
-
 
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -194,29 +144,9 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //////scroll
 
-
-
-
-
-
-
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 window.addEventListener("scroll", () => {
   scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
@@ -229,19 +159,7 @@ scrollToTopBtn.addEventListener("click", () => {
   });
 });
 
-
-
-
-
-
-
-
-
 ///service
-
-
-
-
 
 const dots = document.querySelectorAll('.dot');
 const images = document.querySelectorAll('.slides img');
